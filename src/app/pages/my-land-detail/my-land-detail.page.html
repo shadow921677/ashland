@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color='success'>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/my-land"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{speaker?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="speaker" class="ion-text-center">
+    <img [src]="speaker.profilePic" [alt]="speaker.name">
+    <br>
+
+    <!--ion-button fill="clear" size="small" color="twitter">
+      <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" size="small" color="github">
+      <ion-icon name="logo-github" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" size="small" color="instagram">
+      <ion-icon name="logo-instagram" slot="icon-only"></ion-icon>
+    </ion-button-->
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">About</ion-label>
+      <br>
+      <p>{{speaker?.about}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Location</ion-label>
+      <br>
+      <p>{{speaker?.location}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <br>
+      <p>{{speaker?.email}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Phone</ion-label>
+      <br>
+      <p>{{speaker?.phone}}</p>
+    </ion-item>
+</ion-list>
+
+</ion-content>

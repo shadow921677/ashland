@@ -1,0 +1,60 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color='success' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
+      <hr>
+      <h2 class="slide-title">
+        Welcome to
+        <b>Ashland</b>
+      </h2>
+      <p>
+        The
+        <b>lorem ipsum</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut velit non metus rutrum auctor semper eget dui.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/slide2.png" class="slide-image" />
+      <hr>
+      <h2 class="slide-title">What is Ashland?</h2>
+      <p>
+        <b>Nunc consequat</b> ieleifend nec mauris nec, lacinia euismod augue. Duis turpis justo, sollicitudin at arcu in, tempor imperdiet nulla.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/slide3.png" class="slide-image" />
+      <hr>
+      <h2 class="slide-title">What is Ashland benefit?</h2>
+      <p>
+        <b>Nam fringilla urna</b> Praesent mattis, lorem in porttitor commodo, metus enim blandit elit, et molestie dolor velit et mi. </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
+      <hr>
+      <h2 class="slide-title">Ready to Start?</h2>
+      <ion-button fill="clear" (click)="startApp()">
+        Continue
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-row class="ligne">
+    <ion-col>
+      <ion-button class="bouton1" color='light' (click)="onSignup()" expand="block"><h3>Signup</h3></ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="bouton2" color='success' (click)="onLogin()" expand="block"><h3>Login</h3></ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

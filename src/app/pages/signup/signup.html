@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color='success'>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="/tutorial"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="signup-logo">
+    <img src="assets/img/appicon.svg" alt="Ashland Logo">
+  </div>
+
+  <form #signupForm="ngForm" novalidate>
+    <ion-row>
+      <ion-col class="colonn">
+        <hr>
+      </ion-col>
+      <ion-col class="colonne">
+        <h2>Inscription</h2>
+      </ion-col>
+      <ion-col class="colonn">
+        <hr>
+      </ion-col>
+    </ion-row>
+
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label class="titre" position="stacked">Username</ion-label>
+        <ion-input class="enregist" [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
+          Username is required
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label class="titre" position="stacked">Email</ion-label>
+        <ion-input class="enregist" [(ngModel)]="signup.email" name="email" type="text" #email="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="email.valid || submitted == false" class="ion-padding-start">
+          Email is required
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label class="titre" position="stacked">Password</ion-label>
+        <ion-input class="enregist" [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
+          Password is required
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label class="titre" position="stacked">Confirm Password</ion-label>
+        <ion-input class="enregist" name="confirmPassword" type="password">
+        </ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button class="bouton" color='success' (click)="onSignup(signupForm)" type="submit" expand="block">Continue</ion-button>
+    </div>
+  </form>
+
+</ion-content>
