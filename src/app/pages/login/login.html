@@ -27,10 +27,10 @@
 
   <ion-row>
     <ion-col class="colonna">
-      <ion-fab-button class="premier" color="google" (click)="openSocial('Google+', fab)">
+      <ion-fab-button class="premier" color="google">
         <ion-icon name="logo-googleplus"></ion-icon>
       </ion-fab-button>
-      <ion-fab-button class="primera" color="facebook" (click)="openSocial('Facebook', fab)">
+      <ion-fab-button class="primera" color="facebook">
         <ion-icon name="logo-facebook"></ion-icon>
       </ion-fab-button>
     </ion-col>
@@ -52,8 +52,8 @@
     <ion-list>
       <ion-item>
         <ion-label class="titre" position="stacked">Username</ion-label>
-        <ion-input class="enregist" [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
-          required>
+        <ion-input class="enregist" [(ngModel)]="login.username" name="username" type="text" #username="ngModel"
+          spellcheck="false" autocapitalize="off" required>
         </ion-input>
       </ion-item>
 
@@ -65,7 +65,8 @@
 
       <ion-item>
         <ion-label class="titre" position="stacked">Password</ion-label>
-        <ion-input class="enregist" [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        <ion-input class="enregist" [(ngModel)]="login.password" name="password" type="password" #password="ngModel"
+          required>
         </ion-input>
       </ion-item>
 
@@ -76,7 +77,8 @@
       </ion-text>
     </ion-list>
     <div class="ion-padding">
-      <ion-button class="bouton" color='success' (click)="onLogin(loginForm)" type="submit" expand="block">Connexion</ion-button>
+      <ion-button class="bouton" color='success' (click)="onLogin(loginForm)" type="submit" expand="block">Connexion
+      </ion-button>
     </div>
   </form>
 
@@ -85,10 +87,14 @@
 <ion-footer no-border>
   <ion-row class="ligne">
     <ion-col>
-      <ion-button class="bouton2" color='success' expand="block"><h3>Password forgotten ?</h3></ion-button>
+      <ion-button class="bouton2" color='success' expand="block">
+        <h3>Password forgotten ?</h3>
+      </ion-button>
     </ion-col>
     <ion-col>
-      <ion-button class="bouton1" color='light' (click)="onSignup()" expand="block"><h3>Create an account</h3></ion-button>
+      <ion-button class="bouton1" color='light' (click)="onSignup()" expand="block">
+        <h3>Create an account</h3>
+      </ion-button>
     </ion-col>
   </ion-row>
 </ion-footer>

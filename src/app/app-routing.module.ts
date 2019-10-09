@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/tutorial',
-    //pathMatch: 'full'
+    pathMatch: 'full'
+  },
+  {
+    path: 'about',
+    loadChildren: './pages/about/about.module#AboutModule'
   },
   {
     path: 'account',
@@ -33,10 +37,37 @@ const routes: Routes = [
     loadChildren: './pages/tutorial/tutorial.module#TutorialModule',
     canLoad: [CheckTutorial]
   },
-  { path: 'my-land', loadChildren: './pages/my-land/my-land.module#MyLandPageModule' },
-  { path: 'my-land-detail/:landId', loadChildren: './pages/my-land-detail/my-land-detail.module#MyLandDetailPageModule' },
-  { path: 'add-title', loadChildren: './pages/add-title/add-title.module#AddTitlePageModule' },
-  { path: 'make-transaction', loadChildren: './pages/make-transaction/make-transaction.module#MakeTransactionPageModule' },
+  {
+    path: 'speakers',
+    loadChildren: './pages/speaker-list/speaker-list.module#SpeakerListModule'
+  },
+  {
+    path: 'speaker/:id',
+    loadChildren:
+      './pages/speaker-detail/speaker-detail.module#SpeakerDetailModule'
+  },
+  {
+    path: 'map',
+    loadChildren: './pages/map/map.module#MapModule'
+  },
+  {
+    path: 'my-land',
+    loadChildren: './pages/my-land/my-land.module#MyLandPageModule'
+  },
+  {
+    path: 'my-land-detail/:landId',
+    loadChildren:
+      './pages/my-land-detail/my-land-detail.module#MyLandDetailPageModule'
+  },
+  {
+    path: 'add-title',
+    loadChildren: './pages/add-title/add-title.module#AddTitlePageModule'
+  },
+  {
+    path: 'make-transaction/:id',
+    loadChildren:
+      './pages/make-transaction/make-transaction.module#MakeTransactionPageModule'
+  },
   {
     path: '**',
     redirectTo: '/tutorial'

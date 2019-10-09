@@ -22,27 +22,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersCenter">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.location}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -52,43 +52,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -107,27 +72,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersWest">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -137,43 +102,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -192,27 +122,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersLittoral">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -222,43 +152,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -277,27 +172,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersSouth">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -307,43 +202,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -362,27 +222,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersAdamaoua">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -392,43 +252,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -447,27 +272,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersNorth">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -477,43 +302,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -532,27 +322,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersFarNorth">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -562,43 +352,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -617,27 +372,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersEast">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -647,43 +402,8 @@
                   </ion-col>
                 </ion-row>
 
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
 
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -702,27 +422,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersNorthWest">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -731,44 +451,7 @@
                     </ion-button>
                   </ion-col>
                 </ion-row>
-
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
-
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>
@@ -787,27 +470,27 @@
           <ion-col size="6" size-md="6" *ngFor="let speaker of speakersSouthWest">
             <ion-card class="speaker-card">
               <ion-card-header class="enTete">
-                <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item detail="false" lines="none" routerLink="/speaker/{{speaker.id}}">
                   <img [src]="speaker.profilePic" alt="Speaker profile pic">
 
                 </ion-item>
               </ion-card-header>
 
               <ion-card-content class="contenu">
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>{{speaker.name}}</b></p>
                   </ion-col>
                 </ion-row>
 
-                <ion-row class="ligne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-row class="ligne" routerLink="/speaker/{{speaker.id}}">
                   <ion-col class="colonne">
                     <p class="colonne"><b>Localisation:</b> {{speaker.name}}</p>
                   </ion-col>
                 </ion-row>
 
                 <ion-row class="ligne">
-                  <ion-col class="colonne" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                  <ion-col class="colonne" routerLink="/speaker/{{speaker.id}}">
                     <p class="colonne"><b>Région:</b>{{speaker.region}}</p>
                   </ion-col>
                   <ion-col>
@@ -816,44 +499,7 @@
                     </ion-button>
                   </ion-col>
                 </ion-row>
-
-                <!--ion-list>
-                  <ion-item *ngFor="let session of speaker.sessions" routerLink="/app/tabs/speakers/session/{{session.id}}">
-                    <h3>{{session.name}}</h3>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <ion-label>{{speaker.name}}</ion-label>
-                  </ion-item>
-
-                  <ion-item class="detail" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
-
-                    <p>About {{speaker.name}}</p>
-                  </ion-item>
-                </ion-list-->
               </ion-card-content>
-
-              <!--ion-row class="ion-no-padding ion-justify-content-center">
-                <ion-col size="4" class="ion-text-left">
-                  <ion-button fill="clear" size="small" color="primary" (click)="goToSpeakerTwitter(speaker)">
-                    <ion-icon name="logo-twitter" slot="start"></ion-icon>
-                    Tweet
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" class="ion-text-center">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openSpeakerShare(speaker)">
-                    <ion-icon name="share-alt" slot="start"></ion-icon>
-                    Share
-                  </ion-button>
-                </ion-col>
-                <ion-col size="4" lass="ion-text-right">
-                  <ion-button fill="clear" size="small" color="primary" (click)="openContact(speaker)">
-                    <ion-icon name="chatboxes" slot="start"></ion-icon>
-                    Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row-->
             </ion-card>
           </ion-col>
         </ion-row>

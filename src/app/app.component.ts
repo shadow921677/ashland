@@ -2,7 +2,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 
-import { Events, MenuController, Platform, ToastController } from '@ionic/angular';
+import {
+  Events,
+  MenuController,
+  Platform,
+  ToastController
+} from '@ionic/angular';
 
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -18,42 +23,6 @@ import { UserData } from './providers/user-data';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
-  appPages = [
-    /*{
-      title: 'Schedule',
-      url: '/app/tabs/schedule',
-      icon: 'calendar'
-    },*/
-    {
-      title: 'Available Lands',
-      url: '/app/tabs/speakers',
-      icon: 'bookmark'
-    },
-    {
-      title: 'My Lands Titles',
-      url: '/my-land',
-      icon: 'bookmark'
-    },
-    {
-      title: 'Add A New Title',
-      url: '/add-title',
-      icon: 'add-circle'
-    },
-    /*{
-      title: 'Map',
-      url: '/app/tabs/map',
-      icon: 'map'
-    },*/
-    /*{
-      title: 'Perfom A Transaction',
-      icon: 'pricetag'
-    },*/
-    {
-      title: 'My Ashcoins',
-      url: '/app/tabs/about',
-      icon: 'logo-bitcoin'
-    }
-  ];
   loggedIn = false;
 
   constructor(
@@ -66,7 +35,7 @@ export class AppComponent implements OnInit {
     private storage: Storage,
     private userData: UserData,
     private swUpdate: SwUpdate,
-    private toastCtrl: ToastController,
+    private toastCtrl: ToastController
   ) {
     this.initializeApp();
   }
@@ -127,7 +96,7 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/tabs/speakers');
+      return this.router.navigateByUrl('/tutorial');
     });
   }
 

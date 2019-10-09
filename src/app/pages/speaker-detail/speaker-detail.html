@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color='success'>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/app/tabs/speakers"></ion-back-button>
+      <ion-back-button defaultHref="/speakers"></ion-back-button>
     </ion-buttons>
     <ion-title class="titre">{{speaker?.name}}</ion-title>
   </ion-toolbar>
@@ -12,15 +12,6 @@
     <img [src]="speaker.profilePic" [alt]="speaker.name">
     <br>
 
-    <!--ion-button fill="clear" size="small" color="twitter">
-      <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
-    </ion-button>
-    <ion-button fill="clear" size="small" color="github">
-      <ion-icon name="logo-github" slot="icon-only"></ion-icon>
-    </ion-button>
-    <ion-button fill="clear" size="small" color="instagram">
-      <ion-icon name="logo-instagram" slot="icon-only"></ion-icon>
-    </ion-button-->
   </div>
 
   <ion-list>
@@ -44,23 +35,23 @@
       <br>
       <p>{{speaker?.phone}}</p>
     </ion-item>
-</ion-list>
+  </ion-list>
 
-<ion-card-header>
-  <ion-row>
-    <ion-col>
-      <ion-button color='success' detail="false" lines="none" routerLink="/app/tabs/map">
-        <ion-icon slot="start" name="map"></ion-icon>
-      Map
-      </ion-button>
-    </ion-col>
-    <ion-col>
-      <ion-button color='success' detail="false" lines="none" routerLink="/">
-        <ion-icon slot="start" name="pricetags"></ion-icon>
-      Perfom a Transaction
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-card-header>
+  <ion-card-header>
+    <ion-row>
+      <ion-col>
+        <ion-button color='success' detail="false" lines="none" routerLink="/map">
+          <ion-icon slot="start" name="map"></ion-icon>
+          Map
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color='success' detail="false" lines="none" routerLink="/make-transaction/2">
+          <ion-icon slot="start" name="pricetags"></ion-icon>
+          Perfom a Transaction
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card-header>
 
 </ion-content>

@@ -8,10 +8,10 @@ import { Storage } from '@ionic/storage';
 @Component({
   selector: 'page-tutorial',
   templateUrl: 'tutorial.html',
-  styleUrls: ['./tutorial.scss'],
+  styleUrls: ['./tutorial.scss']
 })
 export class TutorialPage {
-  showSkip = true;
+  showSkip = false;
 
   @ViewChild('slides') slides: IonSlides;
 
@@ -23,7 +23,7 @@ export class TutorialPage {
 
   startApp() {
     this.router
-      .navigateByUrl('/app/tabs/speakers')
+      .navigateByUrl('/speakers')
       .then(() => this.storage.set('ion_did_tutorial', true));
   }
 
@@ -44,7 +44,7 @@ export class TutorialPage {
   ionViewWillEnter() {
     this.storage.get('ion_did_tutorial').then(res => {
       if (res === true) {
-        this.router.navigateByUrl('/app/tabs/speakers');
+        this.router.navigateByUrl('/speakers');
       }
     });
 

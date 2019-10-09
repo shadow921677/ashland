@@ -1,5 +1,3 @@
-
-
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
@@ -10,7 +8,7 @@ import { ConferenceData } from '../../providers/conference-data';
 @Component({
   selector: 'my-land',
   templateUrl: './my-land.page.html',
-  styleUrls: ['./my-land.page.scss'],
+  styleUrls: ['./my-land.page.scss']
 })
 export class MyLandPage {
   speakers: any[] = [];
@@ -93,4 +91,6 @@ export class MyLandPage {
 
     await actionSheet.present();
   }
+
+  onDetail(speaker: any) {}
 }

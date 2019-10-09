@@ -6,29 +6,24 @@ import { UserData } from '../../providers/user-data';
 
 import { UserOptions } from '../../interfaces/user-options';
 
-
-
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html',
-  styleUrls: ['./signup.scss'],
+  styleUrls: ['./signup.scss']
 })
 export class SignupPage {
   signup: UserOptions = { username: '', password: '', email: '' };
   submitted = false;
   confirmPassword: string;
 
-  constructor(
-    public router: Router,
-    public userData: UserData
-  ) {}
+  constructor(public router: Router, public userData: UserData) {}
 
   onSignup(form: NgForm) {
     this.submitted = true;
 
     if (form.valid) {
       this.userData.signup(this.signup.username);
-      this.router.navigateByUrl('/app/tabs/speakers');
+      this.router.navigateByUrl('/speakers');
     }
   }
 }

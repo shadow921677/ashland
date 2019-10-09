@@ -44,25 +44,29 @@
 
     <ion-list class="liste" lines="none">
       <ion-item>
-        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label" name="label" type="text" #label="ngModel">
+        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label"
+          name="label" type="text" #label="ngModel">
         </ion-input>
       </ion-item>
       <hr>
 
       <ion-item>
-        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label" name="label" type="text" #label="ngModel">
+        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label"
+          name="label" type="text" #label="ngModel">
         </ion-input>
       </ion-item>
       <hr>
 
       <ion-item>
-        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label" name="label" type="text" #label="ngModel">
+        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label"
+          name="label" type="text" #label="ngModel">
         </ion-input>
       </ion-item>
       <hr>
 
       <ion-item>
-        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label" name="label" type="text" #label="ngModel">
+        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label"
+          name="label" type="text" #label="ngModel">
         </ion-input>
       </ion-item>
       <hr>
@@ -71,114 +75,18 @@
 
     <ion-row class="rowBtn">
       <ion-col class="colBtn">
-        <ion-button class="boutton" color='success' (click)="onSignup(signupForm)" type="submit"><span>Valider</span></ion-button>
+        <ion-button class="boutton" color='success' (click)="onSignup(signupForm)" type="submit"><span>Valider</span>
+        </ion-button>
       </ion-col>
       <ion-col class="colBtn">
-        <ion-button class="boutton" color='success' (click)="onSignup(signupForm)" type="submit"><span>Annuler</span></ion-button>
+        <ion-button class="boutton" color='success' (click)="onSignup(signupForm)" type="submit"><span>Annuler</span>
+        </ion-button>
       </ion-col>
       <ion-col class="colBtn">
-        <ion-button class="boutton" color='success' (click)="onSignup(signupForm)" type="submit"><span>Quitter</span></ion-button>
+        <ion-button class="boutton" color='success' (click)="onSignup(signupForm)" type="submit"><span>Quitter</span>
+        </ion-button>
       </ion-col>
     </ion-row>
   </form>
-
-
-  <!--form #signupForm="ngForm" novalidate>
-    <ion-list lines="none">
-      <ion-item>
-
-
-        <ion-label position="stacked" color="primary">Label</ion-label>
-
-
-        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.label" name="label" type="text" #label="ngModel">
-        </ion-input>
-        <hr>
-      </ion-item>
-
-
-      <ion-item>
-        <ion-label position="stacked" color="primary">Description</ion-label>
-        <ion-textarea [(ngModel)]="land.description" name="description" type="text" #description="ngModel">
-        </ion-textarea>
-      </ion-item>
-
-
-      <ion-item>
-
-
-        <ion-label position="stacked" color="primary">Location</ion-label>
-
-
-        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.location" name="location" type="text" #location="ngModel">
-        </ion-input>
-        <hr>
-      </ion-item>
-
-      <ion-item>
-
-
-        <ion-label position="stacked" color="primary">Size</ion-label>
-
-
-        <ion-input class="ipt" placeholder="Identifiant du Titre Foncier" expand="block" [(ngModel)]="land.size" name="size" type="text" #size="ngModel">
-        </ion-input>
-        <hr>
-      </ion-item>
-
-
-      <ion-item>
-        <ion-label position="stacked" color="primary">Image</ion-label>
-        <ion-input [(ngModel)]="land.image" name="image" type="file" #size="ngModel">
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
-          Username is required
-        </p>
-      </ion-text>
-      <ion-item>
-        <ion-label position="stacked" color="primary">Email</ion-label>
-        <ion-input [(ngModel)]="signup.email" name="email" type="text" #email="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="email.valid || submitted == false" class="ion-padding-start">
-          Email is required
-        </p>
-      </ion-text>
-
-      <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
-          Password is required
-        </p>
-      </ion-text>
-
-
-    </ion-list>
-
-
-    <div class="ion-padding">
-      <ion-button (click)="onSignup(signupForm)" type="submit" expand="block">Add</ion-button>
-    </div>
-
-
-    <ion-row class="rowBtn">
-      <ion-col>
-        <ion-button class="bouton1" color='success' (click)="onSignup(signupForm)" type="submit">Valider</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button class="bouton2" color='success' (click)="onSignup(signupForm)" type="submit">Annuler</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button class="bouton3" color='success' (click)="onSignup(signupForm)" type="submit">Quitter</ion-button>
-      </ion-col>
-    </ion-row>
-  </form-->
 
 </ion-content>

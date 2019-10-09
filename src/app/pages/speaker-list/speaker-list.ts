@@ -9,7 +9,7 @@ import { ConferenceData } from '../../providers/conference-data';
 @Component({
   selector: 'page-speaker-list',
   templateUrl: 'speaker-list.html',
-  styleUrls: ['./speaker-list.scss'],
+  styleUrls: ['./speaker-list.scss']
 })
 export class SpeakerListPage implements OnInit {
   speakers: any[] = [];
@@ -42,7 +42,6 @@ export class SpeakerListPage implements OnInit {
   ) {}
 
   ionViewDidEnter() {
-
     this.confData.getSpeakers().subscribe((speakers: any[]) => {
       this.speakers = speakers;
     });
@@ -57,35 +56,35 @@ export class SpeakerListPage implements OnInit {
     let tableau8 = [];
     let tableau9 = [];
     let tableau10 = [];
-    this.speakers.forEach(function(element){
-      if(element.region === 'center'){
+    this.speakers.forEach(function(element) {
+      if (element.region === 'center') {
         tableau.push(element);
       }
-      if(element.region === 'littoral'){
+      if (element.region === 'littoral') {
         tableau2.push(element);
       }
-      if(element.region === 'west'){
+      if (element.region === 'west') {
         tableau3.push(element);
       }
-      if(element.region === 'south'){
+      if (element.region === 'south') {
         tableau4.push(element);
       }
-      if(element.region === 'adamaoua'){
+      if (element.region === 'adamaoua') {
         tableau5.push(element);
       }
-      if(element.region === 'north'){
+      if (element.region === 'north') {
         tableau6.push(element);
       }
-      if(element.region === 'far north'){
+      if (element.region === 'far north') {
         tableau7.push(element);
       }
-      if(element.region === 'east'){
+      if (element.region === 'east') {
         tableau8.push(element);
       }
-      if(element.region === 'north west'){
+      if (element.region === 'north west') {
         tableau9.push(element);
       }
-      if(element.region === 'south west'){
+      if (element.region === 'south west') {
         tableau10.push(element);
       }
     });
@@ -109,16 +108,12 @@ export class SpeakerListPage implements OnInit {
     this.northWestLength = tableau9.length;
     this.speakersSouthWest = tableau10;
     this.southWestLength = tableau10.length;
-
   }
 
-  ngOnInit() {
-
-
-  }
+  ngOnInit() {}
 
   onDetail(speaker: any) {
-    this.router.navigateByUrl('/app/tabs/speakers/speaker-details/' + speaker.id);
+    this.router.navigateByUrl('/speaker/' + speaker.id);
   }
 
   goToSpeakerTwitter(speaker: any) {
